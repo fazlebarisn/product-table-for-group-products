@@ -1,0 +1,18 @@
+{
+    "name": "fazlebari/grouptable",
+    "description": "This will display product table on woocommerce group products",
+    "license": "GPLv2",
+    "autoload": {
+        "psr-4": {
+            "Fazlebari\\Grouptable\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Fazle Bari",
+            "email": "fazlebarisn@hotmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
