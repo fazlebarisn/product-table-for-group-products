@@ -35,16 +35,28 @@ class SelectTable{
                         <label class="wpt_label wpt_group_table " for="wpt_group_table"><?php esc_html_e( 'Select Group Table', 'wpt_pro' );?></label>
                     </th>
                     <td>
-                        <select name="data[wpt_group_table]" class="wpt_fullwidth ua_input wpt_group_table">
-                            <option value="none">None</option>
-                            <?php 
-                                $footer_cart_templates = [1,2,3,4,5,6,7,7,9,10,11,12,13,14,15,16,17,18,19,20,21,22];
-                                foreach($footer_cart_templates as $template){
-                                    $selected = isset( $current_config_value['wpt_group_table'] ) && $current_config_value['wpt_group_table'] == $template? 'selected' : '';
-                                    echo '<option value="'. $template .'" ' . $selected . '>'."Template No " . $template . '</option>'; 
-                                } 
-                            ?>
+                        <?php 
+                        global $post;
+                        $product_tables = get_posts( array(
+                            'post_type' => 'wpt_product_table',
+                            'numberposts' => -1,
+                            ) );
+                            if(!empty($product_tables)){
+                        ?>
+                        <select name="data[group_table_id]" class="wpt_fullwidth ua_input wpt_table_on_archive">
+                            <option value="">Select a Table</option>
+                        <?php 
+                        
+                        foreach ($product_tables as $table){
+                            $selected = isset( $current_config_value['group_table_id'] ) && $current_config_value['group_table_id'] == $table->ID ? 'selected' : '';
+                            echo '<option value="'. $table->ID .'" ' . $selected . '>' . $table->post_title . '</option>'; 
+                        }
+                        ?>
                         </select>
+                        <?php
+                        } else { 
+                            echo esc_html( 'Seems you have not created any table yet. Create a table first!', 'wpt_pro' );
+                        } ?>
                         <br>
                         <p><?php echo esc_html__( 'Select a Table for group products', 'wpt_pro' ); ?></p>
                     </td>
