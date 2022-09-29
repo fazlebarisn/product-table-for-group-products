@@ -10,8 +10,8 @@ class Enqueue{
     }
 
 	function enqueue(){
-		wp_enqueue_style('faqstyle', WOO_FAQ_URL . '/assets/css/group-ptable.css', [], '1.1', 'all');
-		wp_enqueue_script('faqscript', WOO_FAQ_URL . '/assets/js/group-ptable.js' , [ 'jquery' ], time(), true );
+		wp_enqueue_style('faqstyle', GROUP_PTABLE_URL . '/assets/css/group-ptable.css', [], '1.1', 'all');
+		wp_enqueue_script('faqscript', GROUP_PTABLE_URL . '/assets/js/group-ptable.js' , [ 'jquery' ], time(), true );
     }
     
 }

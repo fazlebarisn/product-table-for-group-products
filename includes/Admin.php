@@ -8,6 +8,7 @@ class Admin{
     {
         new Admin\Enqueue();
         new Admin\AdminNotice();
+        new Admin\SelectTable();
     }
     
 }
