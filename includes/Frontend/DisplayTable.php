@@ -42,7 +42,7 @@ class DisplayTable{
     }
 
     public function displayTable(){
-        
+
         global $product;
         $grouped = $product->is_type( 'grouped' );
 
