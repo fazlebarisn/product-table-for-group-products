@@ -1,6 +1,6 @@
 <?php
 
-namespace Woo\Faq\Admin;
+namespace Group\Ptable\Admin;
 
 class AdminNotice{
     public function __construct(){

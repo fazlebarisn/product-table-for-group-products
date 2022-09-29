@@ -4,8 +4,9 @@
     "license": "GPLv2",
     "autoload": {
         "psr-4": {
-            "Fazlebari\\Grouptable\\": "src/"
-        }
+            "Group\\Ptable\\": "includes/"
+        },
+        "files":[]
     },
     "authors": [
         {
@@ -16,3 +17,5 @@
     "minimum-stability": "dev",
     "require": {}
 }
+
+

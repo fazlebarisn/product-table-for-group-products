@@ -1,12 +1,11 @@
 <?php
 
-namespace Woo\Faq;
+namespace Group\Ptable;
 
 class Frontend{
 
     function __construct()
     {
-        new Frontend\FaqHtml();
         new Frontend\Enqueue();
     }
 
