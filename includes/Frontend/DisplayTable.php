@@ -34,18 +34,24 @@ class DisplayTable{
 
     public function tableQuery( $args ){
 
-        global $product;
-        $product_id = $product->get_id();
-        $product    = wc_get_product( $product_id );
-        $children   = $product->get_children();
-        
-        // var_dump($children);
+        if ( is_product() ){
+            global $product;
 
-        $args['post__in'] = $children;
+            $grouped = $product->is_type( 'grouped' );
+            if( !$grouped ) return;
+    
+            $product_id = $product->get_id();
+            $product    = wc_get_product( $product_id );
+            $children   = $product->get_children();
+            $args['post__in'] = $children;
+            return $args;
+        }
         return $args;
     }
 
     public function displayTable(){
+
+        if ( !is_product() ) return;
 
         global $product;
         $grouped = $product->is_type( 'grouped' );
