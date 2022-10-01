@@ -13,6 +13,10 @@ class DisplayTable{
     public function getTableId(){
 
         $config = get_option( 'wpt_configure_options' ); 
+
+        $table_on_of = isset( $config['group_table_on_of'] ) ? $config['group_table_on_of'] : false;
+
+        if('on' == $table_on_of) return;
         
 		$table_id = isset( $config['group_table_id'] ) ? $config['group_table_id'] : false;
         $table_id = apply_filters( 'wpto_default_group_table_id', $table_id );
