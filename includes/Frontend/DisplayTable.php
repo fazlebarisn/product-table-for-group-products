@@ -6,6 +6,7 @@ class DisplayTable{
 
     function __construct()
     {
+        add_filter('wpto_table_query_args' , [$this, 'tableQuery'] );
         add_filter('wpt_query_args' , [$this, 'tableQuery'] );
         add_action('woocommerce_before_add_to_cart_form', [$this, 'displayTable'] );
     }
