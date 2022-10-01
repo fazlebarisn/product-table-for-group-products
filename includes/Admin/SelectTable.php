@@ -17,22 +17,22 @@ class SelectTable{
             <table class="ultraaddons-table">
                 <tr id="wpt_group_table_on">
                     <th>
-                        <label class="wpt_label wpt_group_table_on_off" for="wpt_group_table_on_off"><?php esc_html_e( 'Group Product Table', 'wpt_pro' );?></label>
+                        <label class="wpt_label wpt_group_table_on_off" for="wpt_group_table_on_off"><?php esc_html_e( 'Group Product Table', 'product-table-for-group-products' );?></label>
                     </th>
                     <td>
                         <label class="switch">
-                            <input name="data[group_table_on_of]" type="checkbox" id="wpt_group_table_on_off" <?php echo isset( $current_config_value['group_table_on_of'] ) ? 'checked="checked"' : ''; ?>>
+                            <input name="data[group_table_on_of]" type="checkbox" id="wpt_group_table_on_off" <?php echo esc_html(isset( $current_config_value['group_table_on_of'] )) ? 'checked="checked"' : ''; ?>>
                             <div class="slider round"><!--ADDED HTML -->
                                 <span class="on">Hide</span><span class="off">Show</span><!--END-->
                             </div>
                         </label>
-                        <p><?php echo esc_html( 'Turn on or off table on group product', 'wpt_pro' ); ?></p>
+                        <p><?php echo esc_html( 'Turn on or off table on group product', 'product-table-for-group-products' ); ?></p>
 
                     </td>
                 </tr>
                 <tr id="wpt_group_table">
                     <th>
-                        <label class="wpt_label wpt_group_table " for="wpt_group_table"><?php esc_html_e( 'Select Group Table', 'wpt_pro' );?></label>
+                        <label class="wpt_label wpt_group_table " for="wpt_group_table"><?php esc_html_e( 'Select Group Table', 'product-table-for-group-products' );?></label>
                     </th>
                     <td>
                         <?php 
