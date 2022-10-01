@@ -55,10 +55,10 @@ class SelectTable{
                         </select>
                         <?php
                         } else { 
-                            echo esc_html( 'Seems you have not created any table yet. Create a table first!', 'wpt_pro' );
+                            echo esc_html( 'Seems you have not created any table yet. Create a table first!', 'product-table-for-group-products' );
                         } ?>
                         <br>
-                        <p><?php echo esc_html__( 'Select a Table for group products', 'wpt_pro' ); ?></p>
+                        <p><?php echo esc_html__( 'Select a Table for group products', 'product-table-for-group-products' ); ?></p>
                     </td>
                 </tr>
             </table>
