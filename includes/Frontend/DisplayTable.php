@@ -10,6 +10,11 @@ class DisplayTable{
         add_action('woocommerce_before_add_to_cart_form', [$this, 'displayTable'] );
     }
 
+    /**
+     * This function will pull the table id from database
+     *  That's id is already save in database by the main plugin
+     * @return $table_id
+     */
     public function getTableId(){
 
         $config = get_option( 'wpt_configure_options' ); 
@@ -32,6 +37,12 @@ class DisplayTable{
         return $table_id;
     }
 
+    /**
+     * Here we are changining the default argument of the table
+     * If the table is displying is group product page on then we will chenge the argument
+     * @param [array] $args
+     * @return $args
+     */
     public function tableQuery( $args ){
 
         if ( is_product() ){
@@ -46,9 +57,15 @@ class DisplayTable{
             $args['post__in'] = $children;
             return $args;
         }
+        // if not group product page then return the default argument
         return $args;
     }
 
+    /**
+     * finially display the table only if it is a group product page
+     *
+     * @return void
+     */
     public function displayTable(){
 
         if ( !is_product() ) return;
@@ -59,6 +76,7 @@ class DisplayTable{
         if( !$grouped ) return;
 
         $table_id = $this->getTableId();
+        
         if( $table_id ){
             echo do_shortcode( "[Product_Table id='{$table_id}']" );
         }

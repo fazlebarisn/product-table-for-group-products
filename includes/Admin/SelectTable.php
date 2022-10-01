@@ -9,6 +9,14 @@ class SelectTable{
         add_action('wpto_admin_configuration_form_top', [$this, 'selectTable'], 10, 2 );
     }
 
+    /**
+     * Here we loop though all table and display as a dropdown menu
+     * Also will add show hide option
+     *
+     * @param [array] $settings
+     * @param [array] $current_config_value
+     * @return void
+     */
     public function selectTable( $settings,$current_config_value ){
         if( !isset( $settings['page'] ) || isset( $settings['page'] ) && $settings['page'] != 'configuration_page' ){
             return;
@@ -36,24 +44,23 @@ class SelectTable{
                     </th>
                     <td>
                         <?php 
-                        global $post;
                         $product_tables = get_posts( array(
                             'post_type' => 'wpt_product_table',
                             'numberposts' => -1,
                             ) );
                             if(!empty($product_tables)){
-                        ?>
-                        <select name="data[group_table_id]" class="wpt_fullwidth ua_input wpt_table_on_archive">
-                            <option value="">Select a Table</option>
-                        <?php 
-                        
-                        foreach ($product_tables as $table){
-                            $selected = isset( $current_config_value['group_table_id'] ) && $current_config_value['group_table_id'] == $table->ID ? 'selected' : '';
-                            echo '<option value="'. $table->ID .'" ' . $selected . '>' . $table->post_title . '</option>'; 
-                        }
-                        ?>
-                        </select>
-                        <?php
+                                ?>
+                                <select name="data[group_table_id]" class="wpt_fullwidth ua_input wpt_table_on_archive">
+                                    <option value="">Select a Table</option>
+                                    <?php 
+                                    
+                                        foreach ($product_tables as $table){
+                                            $selected = isset( $current_config_value['group_table_id'] ) && $current_config_value['group_table_id'] == $table->ID ? 'selected' : '';
+                                            echo '<option value="'. $table->ID .'" ' . $selected . '>' . $table->post_title . '</option>'; 
+                                        }
+                                    ?>
+                                </select>
+                                <?php
                         } else { 
                             echo esc_html( 'Seems you have not created any table yet. Create a table first!', 'product-table-for-group-products' );
                         } ?>
