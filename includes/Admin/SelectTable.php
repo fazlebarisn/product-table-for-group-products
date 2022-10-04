@@ -56,7 +56,10 @@ class SelectTable{
                                     
                                         foreach ($product_tables as $table){
                                             $selected = isset( $current_config_value['group_table_id'] ) && $current_config_value['group_table_id'] == $table->ID ? 'selected' : '';
-                                            echo '<option value="'. $table->ID .'" ' . $selected . '>' . $table->post_title . '</option>'; 
+                                            ?>
+                                                <option value="<?php echo esc_attr($table->ID) ?>" <?php echo esc_attr( $selected ) ?> ><?php echo esc_attr( $table->post_title ) ?></option>
+                                            <?php
+                                            // echo '<option value="'. $table->ID .'" ' . $selected . '>' . $table->post_title . '</option>'; 
                                         }
                                     ?>
                                 </select>
