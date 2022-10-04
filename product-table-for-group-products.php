@@ -118,10 +118,10 @@ final class GroupProductTable{
   *
   * @return \GroupProductTable class
   */
- function roupProductTable(){
+ function fbsGroupProductTable(){
      return GroupProductTable::init();
  }
 
  // kick-off the plugin
- roupProductTable();
+ fbsGroupProductTable();
 
