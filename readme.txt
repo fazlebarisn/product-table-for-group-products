@@ -38,8 +38,9 @@ You can show or hide tabel by a single click.
 
 == Screenshots ==
 
-1.Show/hide button.
-2. Select table from dropdown.
+1. Table on group product page 
+2. Show/hide button.
+3. Select table from dropdown.
 
 
 == Changelog ==
