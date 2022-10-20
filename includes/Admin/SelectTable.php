@@ -38,7 +38,7 @@ class SelectTable{
 
                     </td>
                 </tr>
-                <tr id="wpt_group_table">
+                <tr class="wpt_group_table">
                     <th>
                         <label class="wpt_label wpt_group_table " for="wpt_group_table"><?php esc_html_e( 'Select Group Product Table', 'product-table-for-group-products' );?></label>
                     </th>
@@ -71,7 +71,7 @@ class SelectTable{
                         <p><?php echo esc_html__( 'Select a Table for group products', 'product-table-for-group-products' ); ?></p>
                     </td>
                 </tr>
-                <tr>
+                <tr class="wpt_group_table">
                 <th>
                     <label class="wpt_label wpt_group_table_position" for="wpt_table_position_for_group"><?php esc_html_e( 'Group Product Table Position', 'product-table-for-group-products' );?></label>
                 </th>
