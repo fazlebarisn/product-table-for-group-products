@@ -40,7 +40,7 @@ class SelectTable{
                 </tr>
                 <tr id="wpt_group_table">
                     <th>
-                        <label class="wpt_label wpt_group_table " for="wpt_group_table"><?php esc_html_e( 'Select Group Table', 'product-table-for-group-products' );?></label>
+                        <label class="wpt_label wpt_group_table " for="wpt_group_table"><?php esc_html_e( 'Select Group Product Table', 'product-table-for-group-products' );?></label>
                     </th>
                     <td>
                         <?php 
@@ -71,6 +71,23 @@ class SelectTable{
                         <p><?php echo esc_html__( 'Select a Table for group products', 'product-table-for-group-products' ); ?></p>
                     </td>
                 </tr>
+                <tr>
+                <th>
+                    <label class="wpt_label wpt_group_table_position" for="wpt_table_position_for_group"><?php esc_html_e( 'Group Product Table Position', 'product-table-for-group-products' );?></label>
+                </th>
+                <td>
+                    <select name="data[group_table_position]" class="wpt_fullwidth ua_input wpt_table_position_for_variation">
+                        <option value="woocommerce_single_product_summary" <?php wpt_selected( 'group_table_position', 'woocommerce_single_product_summary' ); ?>><?php esc_html_e( 'After Title', 'product-table-for-group-products' );?></option>
+                        <option value="woocommerce_product_meta_start" <?php wpt_selected( 'group_table_position', 'woocommerce_product_meta_start' ); ?>><?php esc_html_e( 'Before Meta', 'product-table-for-group-products' );?></option>
+                        <option value="woocommerce_product_meta_end" <?php wpt_selected( 'group_table_position', 'woocommerce_product_meta_end' ); ?>><?php esc_html_e( 'After Meta', 'product-table-for-group-products' );?></option>
+                        <option value="woocommerce_after_single_product_summary" <?php wpt_selected( 'group_table_position', 'woocommerce_after_single_product_summary' ); ?>><?php esc_html_e( 'After summary', 'product-table-for-group-products' );?></option>
+
+                        <option value="woocommerce_product_after_tabs" <?php wpt_selected( 'group_table_position', 'woocommerce_product_after_tabs' ); ?>><?php esc_html_e( 'After Tab', 'product-table-for-group-products' );?></option>
+                    </select>
+                    <br>
+                    <p><?php echo esc_html__( 'Select a table position to show the table to your desire place!', 'product-table-for-group-products' ); ?></p>
+                </td>
+            </tr>
             </table>
             
         <?php

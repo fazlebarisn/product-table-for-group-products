@@ -6,9 +6,24 @@ class DisplayTable{
 
     function __construct()
     {
+        $config = get_option( 'wpt_configure_options' ); 
+        $table_position = isset( $config['group_table_position'] ) ? $config['group_table_position'] : false;
+
         add_filter('wpto_table_query_args' , [$this, 'tableQuery'] );
         add_filter('wpt_query_args' , [$this, 'tableQuery'] );
-        add_action('woocommerce_before_add_to_cart_form', [$this, 'displayTable'] );
+        
+        if( $table_position == 'woocommerce_single_product_summary' ){
+            add_action('woocommerce_single_product_summary', [$this, 'displayTable'] );
+        }elseif($table_position == 'woocommerce_product_meta_start'){
+            add_action('woocommerce_product_meta_start', [$this, 'displayTable'] );
+        }elseif($table_position == 'woocommerce_product_meta_end'){
+            add_action('woocommerce_product_meta_end', [$this, 'displayTable'] );
+        }elseif($table_position == 'woocommerce_after_single_product_summary'){
+            add_action('woocommerce_after_single_product_summary', [$this, 'displayTable'] );
+        }elseif($table_position == 'woocommerce_product_after_tabs'){
+            add_action('woocommerce_product_after_tabs', [$this, 'displayTable'] );
+        }
+        
     }
 
     /**
