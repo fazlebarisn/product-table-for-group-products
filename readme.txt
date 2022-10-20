@@ -3,7 +3,7 @@ Contributors: fazlebari
 Tags: product-table-for-group-product, woocommerce, product-table, woocommerce-proup-product-tabel
 Requires at least: 4.6
 Tested up to: 6.0.2
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 Requires PHP: 7.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -44,6 +44,10 @@ You can show or hide tabel by a single click.
 
 
 == Changelog ==
+
+= 1.0.0 =
+* Add Table position 
+* Fixed bug
 
 = 1.0.0 =
 * Just Start First version.
