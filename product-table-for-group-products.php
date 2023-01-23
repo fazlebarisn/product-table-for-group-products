@@ -6,10 +6,10 @@
 * Version: 1.0.1
 * Author: Fazle Bari
 * Author URI: https://www.chitabd.com/
-* Requires PHP: 7.2
-* Tested up to:         6.0.5
-* WC requires at least: 3.0.0
-* WC tested up to: 	 6.8.2
+* Requires PHP:             7.2
+* Tested up to:             6.1.1
+* WC requires at least:     3.0.0
+* WC tested up to: 	        7.3.0
 * Licence: GPL Or leater
 * Text Domain: product-table-for-group-products
 * Domain Path: /languages/
