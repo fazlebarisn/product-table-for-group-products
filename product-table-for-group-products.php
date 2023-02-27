@@ -9,7 +9,7 @@
 * Requires PHP:             7.2
 * Tested up to:             6.1.1
 * WC requires at least:     3.0.0
-* WC tested up to: 	        7.3.0
+* WC tested up to: 	        7.4.0
 * Licence: GPL Or leater
 * Text Domain: product-table-for-group-products
 * Domain Path: /languages/
@@ -32,7 +32,7 @@ final class GroupProductTable{
     /**
      * defien plugin version
      */
-    const version = "1.0.1";
+    const version = "1.0.2";
 
     /**
      * class constructor
