@@ -22,6 +22,17 @@ if( file_exists( dirname(__FILE__) . '/vendor/autoload.php') ){
     require_once dirname(__FILE__) . '/vendor/autoload.php';
 }
 
+/**
+ *  Only for developer
+ * @author Fazle Bari
+ */
+if( !function_exists('dd') ){
+    function dd( $val ){
+        echo '<pre>';
+            var_dump($val);
+        echo '</pre>';
+    }
+}
 
 /**
  * The main class
