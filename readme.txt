@@ -46,6 +46,7 @@ You can show or hide tabel by a single click.
 == Changelog ==
 
 = 1.0.2 =
+* dynamically add or remove 'add to cart' button
 * Test with updated WooCommerce version
 * Fixed bug
 
