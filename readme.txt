@@ -1,10 +1,10 @@
 === Product Table For Group Products ===
 Contributors: fazlebari
 Tags: product-table-for-group-product, woocommerce, product-table, woocommerce-proup-product-tabel
-Requires at least: 5.9
-Tested up to: 6.1.1
-Requires PHP: 7.2
-Stable tag: 1.0.2
+Requires at least: 6.0
+Tested up to: 6.2
+Requires PHP: 7.3
+Stable tag: 1.0.3
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -44,6 +44,11 @@ You can show or hide tabel by a single click.
 
 
 == Changelog ==
+
+= 1.0.3 =
+* Test with updated WordPress version
+* Test with updated WooCommerce version
+* Fixed bug
 
 = 1.0.2 =
 * dynamically add or remove 'add to cart' button
