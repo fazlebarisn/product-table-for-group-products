@@ -12,6 +12,7 @@ class DisplayTable{
     function __construct()
     {
         $this->config = get_option( 'wpt_configure_options' ); 
+
         $this->table_on_of = isset( $this->config['group_table_on_of'] ) ? $this->config['group_table_on_of'] : false;
         $this->table_id = isset( $this->config['group_table_id'] ) ? $this->config['group_table_id'] : false;
 
@@ -32,8 +33,15 @@ class DisplayTable{
             add_action('woocommerce_product_after_tabs', [ $this, 'displayTable'] );
         }
         
-        // This will remove add to cart section if group table is on 
-        add_action('wp', [$this, 'remove_grouped_add_to_cart']);
+        /**
+         * if group table option is on then hide the add to cart button
+         * @since 1.0.4
+         * @author Fazle Bari
+         */
+        if( ! empty( $this->config['group_table_id']) && null == $this->config['group_table_on_of'] ){
+            add_action('wp', [$this, 'remove_grouped_add_to_cart']);
+        }
+        
     }
 
     /**
@@ -109,7 +117,7 @@ class DisplayTable{
     }
 
     /**
-     * if group table option is on then add to cart button will hide
+     * if group table option is on then hide the add to cart button
      * @since 1.0.2
      * @author Fazle Bari
      */
