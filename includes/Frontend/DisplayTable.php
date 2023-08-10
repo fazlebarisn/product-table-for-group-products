@@ -32,13 +32,13 @@ class DisplayTable{
         }elseif( $this->table_position  == 'woocommerce_product_after_tabs'){
             add_action('woocommerce_product_after_tabs', [ $this, 'displayTable'] );
         }
-        
+
         /**
          * if group table option is on then hide the add to cart button
          * @since 1.0.4
          * @author Fazle Bari
          */
-        if( ! empty( $this->config['group_table_id']) && null == $this->config['group_table_on_of'] ){
+        if( ! empty( $this->config['group_table_id']) && false == $this->table_on_of ){
             add_action('wp', [$this, 'remove_grouped_add_to_cart']);
         }
         
