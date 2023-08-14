@@ -46,6 +46,7 @@ You can show or hide tabel by a single click.
 == Changelog ==
 
 = 1.0.5 =
+* Admin panel design updated
 * Test with updated WooCommerce version 8.0.1
 * Fixed bug
 
