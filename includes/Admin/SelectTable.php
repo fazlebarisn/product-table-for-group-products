@@ -100,7 +100,7 @@ class SelectTable{
             <table class="wpt-my-table universal-setting">
                 <tbody>
                     <tr class="divider-row">
-                        <td>
+                        <td class="group-product-top">
                             <div class="wqpmb-form-control">
                                 <div class="form-label col-lg-6">
                                     <h4 class="section-divider-title">For Group Products</h4>
@@ -120,7 +120,7 @@ class SelectTable{
                         <td>
                             <div class="wpt-form-control">
                                 <div class="form-label col-lg-6">
-                                    <label class="wpt_label wpt_group_table_on_off" for="wpt_group_table"><?php esc_html_e( 'Group Product Table', 'product-table-for-group-products' );?></label>
+                                    <label class="wpt_label wpt_group_table_on_off" for="wpt_group_table"><?php esc_html_e( 'Select Group Product Table', 'product-table-for-group-products' );?></label>
                                 </div>
                                 <div class="form-field col-lg-6">
                                     <?php 
@@ -159,16 +159,16 @@ class SelectTable{
                         </td>
                         <td>
                             <div class="wpt-form-info">
-                                <?php wpt_doc_link('https://wooproducttable.com/docs/doc/table-options/product-table-woocommerce-archive-category-tag-attribute-page/'); ?>
-                                <p><?php echo esc_html__( 'Enable Table on Archive Page. Such as: Archive Page, Tag Page, Taxonomy Page. First Select a table and check [On] to show in shop/archive page.', 'wpt_pro' ); ?></p>
+                                <?php wpt_doc_link('https://wooproducttable.com/docs/doc/'); ?>
+                                <p><?php echo esc_html__( 'Enable table on group product Page. First Select a table and check [Show] to show the table on a group page.', 'product-table-for-group-products' ); ?></p>
                                 <p class="wpt-tips">
-                                    <b><?php echo esc_html__( 'Notice:', 'wpt_pro' ); ?></b>
-                                    <span><?php echo esc_html__( 'Product table will display products according to WooCommerce default query and Advance Search box is not available on Archive page.','wpt_pro' ); ?></span>
+                                    <b><?php echo esc_html__( 'Notice:', 'product-table-for-group-products' ); ?></b>
+                                    <span><?php echo esc_html__( 'Make sure you have installed and activated Woo Product Table plugin','product-table-for-group-products' ); ?></span>
                                 </p>
                             </div> 
                         </td>
                     </tr>
-                    <tr>
+                    <tr class="group-table-bottom">
                         <td>
                             <div class="wpt-form-control">
                                 <div class="form-label col-lg-6">
@@ -187,12 +187,8 @@ class SelectTable{
                         </td>
                         <td>
                             <div class="wpt-form-info">
-                                <?php wpt_doc_link('https://wooproducttable.com/docs/doc/table-options/product-table-woocommerce-archive-category-tag-attribute-page/'); ?>
-                                <p><?php echo esc_html__( 'Enable Table on Archive Page. Such as: Archive Page, Tag Page, Taxonomy Page. First Select a table and check [On] to show in shop/archive page.', 'wpt_pro' ); ?></p>
-                                <p class="wpt-tips">
-                                    <b><?php echo esc_html__( 'Notice:', 'wpt_pro' ); ?></b>
-                                    <span><?php echo esc_html__( 'Product table will display products according to WooCommerce default query and Advance Search box is not available on Archive page.','wpt_pro' ); ?></span>
-                                </p>
+                                <?php wpt_doc_link('https://wooproducttable.com/docs/doc/'); ?>
+                                <p><?php echo esc_html__( 'You can chnage table position from here.', 'product-table-for-group-products' ); ?></p>
                             </div> 
                         </td>
                     </tr>
