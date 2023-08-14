@@ -4,7 +4,7 @@ Tags: product-table-for-group-product, woocommerce, product-table, woocommerce-g
 Requires at least: 6.0
 Tested up to: 6.3
 Requires PHP: 7.3
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -44,6 +44,10 @@ You can show or hide tabel by a single click.
 
 
 == Changelog ==
+
+= 1.0.5 =
+* Test with updated WooCommerce version 8.0.1
+* Fixed bug
 
 = 1.0.4 =
 * Test with updated WordPress version 6.3
