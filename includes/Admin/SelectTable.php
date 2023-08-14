@@ -24,7 +24,7 @@ class SelectTable{
         $main_plugin_version = WPT_DEV_VERSION;
         $main_plugin_version = intval (str_replace('.', '', $main_plugin_version) );
         if( $main_plugin_version <= 3420 ) :
-        dd($main_plugin_version);
+
         ?>
             <table class="ultraaddons-table">
                 <tr id="wpt_group_table_on">
