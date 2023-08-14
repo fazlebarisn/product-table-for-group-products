@@ -14,6 +14,7 @@ class DisplayTable{
         $this->config = get_option( 'wpt_configure_options' ); 
 
         $this->table_on_of = isset( $this->config['group_table_on_of'] ) ? $this->config['group_table_on_of'] : false;
+        
         $this->table_id = isset( $this->config['group_table_id'] ) ? $this->config['group_table_id'] : false;
 
         $this->table_position = isset( $this->config['group_table_position'] ) ? $this->config['group_table_position'] : false;
@@ -38,7 +39,7 @@ class DisplayTable{
          * @since 1.0.4
          * @author Fazle Bari
          */
-        if( ! empty( $this->config['group_table_id']) && false == $this->table_on_of ){
+        if( ! empty( $this->config['group_table_id']) && 'on' === $this->table_on_of ){
             add_action('wp', [$this, 'remove_grouped_add_to_cart']);
         }
         
@@ -53,7 +54,7 @@ class DisplayTable{
 
     public function getTableId(){
 
-        if( 'on' == $this->table_on_of ) return;
+        if( false == $this->table_on_of ) return;
 
         $this->table_id= apply_filters( 'wpto_default_group_table_id', $this->table_id);
         $this->table_id = is_numeric( $this->table_id ) ? (int) $this->table_id : false;
@@ -122,7 +123,7 @@ class DisplayTable{
      * @author Fazle Bari
      */
     public function remove_grouped_add_to_cart(){
-        if ( is_product() && ! is_ajax()  && !$this->table_on_of ) {
+        if( is_product() && ! is_ajax()  && $this->table_on_of ) {
             remove_action( 'woocommerce_grouped_add_to_cart', 'woocommerce_grouped_add_to_cart', 30 );
           }
     }

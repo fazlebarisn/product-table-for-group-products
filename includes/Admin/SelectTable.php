@@ -151,7 +151,7 @@ class SelectTable{
                                     <label class="switch">
                                         <input name="data[group_table_on_of]" type="checkbox" id="wpt_group_table_on_off" <?php echo esc_html(isset( $current_config_value['group_table_on_of'] )) ? 'checked="checked"' : ''; ?>>
                                         <div class="slider round"><!--ADDED HTML -->
-                                            <span class="on">Hide</span><span class="off">Show</span><!--END-->
+                                            <span class="on">Show</span><span class="off">Hide</span><!--END-->
                                         </div>
                                     </label>
                                 </div>
