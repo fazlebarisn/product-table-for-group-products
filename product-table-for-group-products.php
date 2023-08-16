@@ -10,7 +10,7 @@
  * Requires PHP:            7.2
  * Tested up to:            6.3
  * WC requires at least:    3.0.0
- * WC tested up to:         8.8.1
+ * WC tested up to:         8.8.2
  * Licence:                 GPL Or leater
  * Text Domain:             product-table-for-group-products
  * Domain Path:             /languages/
