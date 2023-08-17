@@ -24,19 +24,18 @@ if (file_exists(dirname(__FILE__) . '/vendor/autoload.php')) {
 }
 
 /**
- *  Only for developer
- * @author Fazle Bari
+ * Only for developer
+ * @author Fazle Bari <fazlebarisn@gmail.com>
  */
-if( !function_exists('dd') ){
-	function dd( $val, $bool = false ){
-		echo "<pre>";
-			if($bool){
+if( ! function_exists('dd') ){
+	function dd( ...$vals){
+		if( ! empty($vals) && is_array($vals) ){
+			foreach($vals as $val ){
+				echo "<pre>";
 				var_dump($val);
-				wp_die();
-			}else{
-				var_dump($val);
+				echo "</pre>";
 			}
-		echo "</pre>";
+		}
 	}
 }
 
