@@ -10,7 +10,7 @@
  * Requires PHP:            7.2
  * Tested up to:            6.3
  * WC requires at least:    3.0.0
- * WC tested up to:         8.8.2
+ * WC tested up to:         8.0.2
  * Licence:                 GPL Or leater
  * Text Domain:             product-table-for-group-products
  * Domain Path:             /languages/
@@ -18,10 +18,6 @@
  */
 
 defined('ABSPATH') or die('Nice Try!');
-
-if (file_exists(dirname(__FILE__) . '/vendor/autoload.php')) {
-    require_once dirname(__FILE__) . '/vendor/autoload.php';
-}
 
 /**
  * Only for developer
@@ -37,6 +33,11 @@ if( ! function_exists('dd') ){
 			}
 		}
 	}
+}
+
+// Include autoload.php
+if (file_exists(dirname(__FILE__) . '/vendor/autoload.php')) {
+    require_once dirname(__FILE__) . '/vendor/autoload.php';
 }
 
 /**
