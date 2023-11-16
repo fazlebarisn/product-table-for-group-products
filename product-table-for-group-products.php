@@ -4,11 +4,11 @@
  * Plugin Name: Product Table For Group Products
  * Plugin URI: https://github.com/fazlebarisn/product-table-for-group-products
  * Description: An addon plugin of product table for WooCommerce. You can display a product table on woocommerce group product. 
- * Version: 1.0.5
+ * Version: 1.1.0
  * Author: Fazle Bari
  * Author URI: https://www.chitabd.com/
  * Requires PHP:            7.2
- * Tested up to:            6.3
+ * Tested up to:            6.4
  * WC requires at least:    3.0.0
  * WC tested up to:         8.8.2
  * Licence:                 GPL Or leater
@@ -49,7 +49,7 @@ final class GroupProductTable
     /**
      * defien plugin version
      */
-    const version = "1.0.5";
+    const version = "1.1.0";
 
     /**
      * class constructor
@@ -59,9 +59,21 @@ final class GroupProductTable
         $this->defineConstants();
 
         register_activation_hook(__FILE__, [$this, 'activate']);
-
+        add_action( 'before_woocommerce_init', [$this, 'group_product_table_hpos'] );
         add_action('plugins_loaded', [$this, 'initPlugin']);
     }
+
+    /**
+     * Declare compatibility with custom order tables for WooCommerce.
+     * Support WooCommerce High-performance order storage
+     * @since 1.1.0
+     * @author Fazle Bari <fazlebarisn@gmail.com>
+     */
+    public function group_product_table_hpos(){
+		if (class_exists('\Automattic\WooCommerce\Utilities\FeaturesUtil')) {
+			\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility('custom_order_tables', __FILE__, true);
+		}
+	}
 
     /**
      * initilize a singileton 
