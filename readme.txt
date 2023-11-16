@@ -2,9 +2,10 @@
 Contributors: fazlebari
 Tags: product-table-for-group-product, woocommerce, product-table, woocommerce-group-product-tabel, tabel, table-view, group-product
 Requires at least: 6.0
-Tested up to: 6.3
+Tested up to: 6.4
+WC tested up to: 8.2.2
 Requires PHP: 7.3
-Stable tag: 1.0.5
+Stable tag: 1.1.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -44,6 +45,13 @@ You can show or hide tabel by a single click.
 
 
 == Changelog ==
+
+= 1.1.0 =
+* Add support WooCommerce High-performance order storage
+* Tested with latest WordPress version 6.4
+* Tested with latest WooCommerce version 8.2.2
+* Fixed Bug
+* Update wp,wc and php version info
 
 = 1.0.5 =
 * Admin panel design updated
