@@ -1,6 +1,6 @@
 === Product Table For Group Products ===
 Contributors: fazlebari
-Tags: product-table-for-group-product, woocommerce, product-table, woocommerce-group-product-tabel, tabel, table-view, group-product
+Tags: product-table-for-group-product, woocommerce, product-table, woocommerce-group-product-tabel, group-product
 Requires at least: 6.0
 Tested up to: 6.5.2
 WC tested up to: 8.7.0
@@ -14,6 +14,9 @@ An addon plugin of product table for WooCommerce to display table on WooCommerce
 == Description ==
 An addon plugin of product table for WooCommerce. You can display a product table on woocommerce group product. 
 
+**How to display?**
+From the WordPress dashboard navigate to Woo Product Table -> Configure. In the 'For Group Products' section you will see 'Select Group Product Table' option.
+Select a table from the dropdown menu. Make sure you click the button is enable as 'Show'.
 
 **[Visit example site](https://chitabd.com/shop)**
 
@@ -28,8 +31,6 @@ Dispaly product table on every group product page
 
 **Show or Hide Table**<br>
 You can show or hide tabel by a single click.
-
-
 
 == Installation ==
 
