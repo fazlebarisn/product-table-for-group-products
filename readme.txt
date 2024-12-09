@@ -46,6 +46,10 @@ You can show or hide tabel by a single click.
 
 
 == Changelog ==
+= 1.2.1 =
+* Tested with latest WordPress version 6.7.1
+* Tested with latest WooCommerce version 9.4.3
+* Fixed Bug
 
 = 1.1.0 =
 * Tested with latest WordPress version 6.5.2
