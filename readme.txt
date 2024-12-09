@@ -2,10 +2,10 @@
 Contributors: fazlebari
 Tags: product-table-for-group-product, woocommerce, product-table, woocommerce-group-product-tabel, group-product
 Requires at least: 6.0
-Tested up to: 6.5.2
-WC tested up to: 8.7.0
+Tested up to: 6.7.1
+WC tested up to: 9.4.3
 Requires PHP: 7.3
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
