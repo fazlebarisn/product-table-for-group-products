@@ -1,13 +1,13 @@
 === Product Table For Group Products ===
 Contributors: fazlebari
 Tags: product-table-for-group-product, woocommerce, product-table, woocommerce-group-product-tabel, group-product
-Requires at least: 6.0
-Tested up to: 6.7.1
-WC tested up to: 9.4.3
+Requires at least: 5.0
+Tested up to: 6.8
+WC tested up to: 10.1
 Requires PHP: 7.3
-Stable tag: 1.2.1
-License: GPLv3
-License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Stable tag: 1.2.2
+License: GPL v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 An addon plugin of product table for WooCommerce to display table on WooCommerce group product page.
 
@@ -46,6 +46,11 @@ You can show or hide tabel by a single click.
 
 
 == Changelog ==
+= 1.2.2 =
+* Tested with latest WordPress version 6.8
+* Tested with latest WooCommerce version 10.1
+* Fixed Bug
+
 = 1.2.1 =
 * Tested with latest WordPress version 6.7.1
 * Tested with latest WooCommerce version 9.4.3
