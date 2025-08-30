@@ -1,19 +1,22 @@
 === Product Table For Group Products ===
 Contributors: fazlebari
-Tags: product-table-for-group-product, woocommerce, product-table, woocommerce-group-product-tabel, tabel, table-view, group-product
-Requires at least: 6.0
-Tested up to: 6.4
-WC tested up to: 8.2.2
+Tags: product-table-for-group-product, woocommerce, product-table, woocommerce-group-product-tabel, group-product
+Requires at least: 5.0
+Tested up to: 6.8
+WC tested up to: 10.1
 Requires PHP: 7.3
-Stable tag: 1.1.0
-License: GPLv3
-License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Stable tag: 1.2.2
+License: GPL v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 An addon plugin of product table for WooCommerce to display table on WooCommerce group product page.
 
 == Description ==
 An addon plugin of product table for WooCommerce. You can display a product table on woocommerce group product. 
 
+**How to display?**
+From the WordPress dashboard navigate to Woo Product Table -> Configure. In the 'For Group Products' section you will see 'Select Group Product Table' option.
+Select a table from the dropdown menu. Make sure you click the button is enable as 'Show'.
 
 **[Visit example site](https://chitabd.com/shop)**
 
@@ -29,8 +32,6 @@ Dispaly product table on every group product page
 **Show or Hide Table**<br>
 You can show or hide tabel by a single click.
 
-
-
 == Installation ==
 
 1. Upload the plugin files to the `/wp-content/plugins/product-table-for-group-products` directory, or install the plugin through the WordPress plugins screen directly.
@@ -45,6 +46,20 @@ You can show or hide tabel by a single click.
 
 
 == Changelog ==
+= 1.2.2 =
+* Tested with latest WordPress version 6.8
+* Tested with latest WooCommerce version 10.1
+* Fixed Bug
+
+= 1.2.1 =
+* Tested with latest WordPress version 6.7.1
+* Tested with latest WooCommerce version 9.4.3
+* Fixed Bug
+
+= 1.1.0 =
+* Tested with latest WordPress version 6.5.2
+* Tested with latest WooCommerce version 8.7.0
+* Fixed Bug
 
 = 1.1.0 =
 * Add support WooCommerce High-performance order storage
